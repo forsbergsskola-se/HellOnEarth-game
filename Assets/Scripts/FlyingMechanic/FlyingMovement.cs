@@ -19,7 +19,7 @@ public class FlyingMovement : MonoBehaviour
     {
         flyVector.x = commandContainer.flyCommandHorizontal;
         animator.SetFloat("Speed", flyVector.sqrMagnitude);
-        horizontal = Convert.ToSingle(Math.Round(commandContainer.flyCommandHorizontal));
+        horizontal = /*Convert.ToSingle(Math.Round())*/commandContainer.flyCommandHorizontal;
         animator.SetFloat("Horizontal", horizontal);
         HandleFlying();
     }
