@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,16 +10,19 @@ public class LightningScript : MonoBehaviour
     public float speed = 20f;
     private Rigidbody2D rb;
     public PlayerHealth playerHealth;
-    private void Awake(){
-        rb = GetComponent<Rigidbody2D>();
-    }
- 
+    private Vector3 direction;
+    private GameObject oden;
+    private Collider2D collider2D;
+    [SerializeField] private LayerMask playerLayer;
     void Start()
     {
-        Vector3 Direction = (FindObjectOfType<PlayerHealth>().transform.position - transform.position).normalized;
-        rb.velocity = Direction * speed;
-        transform.up = -Direction;
-        playerHealth = GameObject.Find("Player (1)").GetComponent<PlayerHealth>();
+        rb = GetComponent<Rigidbody2D>();
+        collider2D = GetComponent<Collider2D>();
+        playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
+        oden = GameObject.Find("Target");
+        direction = (oden.transform.position - transform.position).normalized;
+        transform.up = -direction;
+        rb.velocity = direction * speed;
     }
     
     void OnTriggerEnter2D (Collider2D hitInfo)
@@ -30,7 +34,7 @@ public class LightningScript : MonoBehaviour
         //     enemy.TakeDamage();
         //     Destroy(gameObject);
         // }
-        if (hitInfo.CompareTag("Player"))
+        if (collider2D.IsTouchingLayers(playerLayer))
         {
             playerHealth.currentHealth -= damage;
             playerHealth.TakeDamage();

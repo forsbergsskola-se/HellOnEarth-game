@@ -102,6 +102,9 @@ MonoBehaviour:
   damage: 40
   speed: 20
   playerHealth: {fileID: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 4
 --- !u!50 &7270832153959817670
 Rigidbody2D:
   serializedVersion: 4
