@@ -6,10 +6,12 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float health;
+    public float damage;
     public float speed;
     public float withinRange;
     
     private Transform playerTransform;
+    public PlayerHealth playerHealth;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +22,10 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         AttackRange();
-        CheckDamage();
+        CheckPlayerDamage();
     }
 
-    private void CheckDamage()
+    private void CheckPlayerDamage()
     {
         if (health <= 0)
         {
@@ -40,8 +42,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    public void OnTriggerEnter2D(Collider2D col)
     {
-        
+        if (col.gameObject.CompareTag("Player"))
+        {
+            playerHealth.health -= damage;
+        }
+
     }
 }
