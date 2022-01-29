@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
         float dist = Vector2.Distance(playerTransform.position, transform.position);
         if (dist <= withinRange)
         {
-            transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerTransform.position.x, transform.position.y), speed * Time.deltaTime);
         }
     }
 
