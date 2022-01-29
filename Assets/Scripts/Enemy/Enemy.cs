@@ -44,9 +44,9 @@ public class Enemy : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (col.CompareTag("Player"))
         {
-            playerHealth.health -= damage;
+            playerHealth.currentHealth -= damage;
         }
 
     }

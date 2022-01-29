@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 2817903691299535666}
   - component: {fileID: 810081801}
   - component: {fileID: 334316542}
+  - component: {fileID: 334316543}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -250,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  gravity: -0.15
+  gravity: -0.19
   movement: {x: 0, y: 0}
   animator: {fileID: 2817903692358862426}
   rb: {fileID: 2817903691299535665}
@@ -299,4 +300,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e94c5ff8a1e8c3498fc4c0d36d57675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  maxHealth: 100
+--- !u!114 &334316543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4563904353689842933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03223c86d6ab2ee4695e6d59a82fa41e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Slider: {fileID: 0}
