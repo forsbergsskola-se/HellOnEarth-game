@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d7e01c8-2076-4aeb-9a3c-0779cf618dfa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HellOnEarth-game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HellOnEarth-game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ChangeForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChangeForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EliasScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EliasScene.unity" afterDir="false" />
-    </list>
+    <list default="true" id="6d7e01c8-2076-4aeb-9a3c-0779cf618dfa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
