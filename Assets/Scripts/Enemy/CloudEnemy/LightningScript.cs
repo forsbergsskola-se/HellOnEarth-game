@@ -13,9 +13,11 @@ public class LightningScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
  
-    void Start() 
+    void Start()
     {
-        rb.velocity = (FindObjectOfType<PlayerHealth>().transform.position - transform.position).normalized * speed;
+        Vector3 Direction = (FindObjectOfType<PlayerHealth>().transform.position - transform.position).normalized;
+        rb.velocity = Direction * speed;
+        transform.up = -Direction;
     }
     
     void OnTriggerEnter2D (Collider2D hitInfo)
