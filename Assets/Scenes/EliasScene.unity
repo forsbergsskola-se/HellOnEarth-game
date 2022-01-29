@@ -380,6 +380,11 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 1233980384404133771, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
   m_PrefabInstance: {fileID: 2817903691574398265}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &818410299 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1585448732, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+  m_PrefabInstance: {fileID: 2817903691574398265}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1932086606 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4658511937929093805, guid: aff2e1f69445b6247ab0a3a647fd86f8, type: 3}
@@ -518,6 +523,10 @@ PrefabInstance:
       propertyPath: Slider
       value: 
       objectReference: {fileID: 1932086607}
+    - target: {fileID: 1585448738, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 818410299}
     - target: {fileID: 4563904353689842933, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
       propertyPath: m_Name
       value: Player-holder
