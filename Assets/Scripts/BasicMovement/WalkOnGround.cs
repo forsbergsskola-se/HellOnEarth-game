@@ -6,7 +6,7 @@ public class WalkOnGround : MonoBehaviour
 {
     public float movementSpeed = 5f;
     public float gravity;
-    [SerializeField] private Vector2 movement;
+    [SerializeField] public Vector2 movement;
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody2D rb;
     void Update()
