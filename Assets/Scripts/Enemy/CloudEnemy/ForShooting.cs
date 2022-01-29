@@ -10,7 +10,8 @@ public class ForShooting : MonoBehaviour
     public float FireRate = 1.0f;
     public float NextFire = 1.0f;
     public float timeToDisappear = 5;
-    
+    public float range;
+    public Transform target;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,8 @@ public class ForShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {         
-            
+        if (Vector2.Distance(transform.position, target.position) > range)
+            return;
         if (Time.time > NextFire)
         {  
             NextFire = Time.time + FireRate;
@@ -34,5 +36,9 @@ public class ForShooting : MonoBehaviour
     void Shoot ()
     {
         Instantiate(LightningPrefab, firePoint.position, firePoint.rotation);
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 }

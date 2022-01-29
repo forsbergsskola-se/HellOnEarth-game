@@ -943,7 +943,8 @@ MonoBehaviour:
   stoppingDistance: 5
   retreaDistance: 4
   startTimeBtwShots: 1
-  player: {fileID: 240535213}
+  range: 10
+  player: {fileID: 4916698}
   projectile: {fileID: 7270832153959817674, guid: 076e1b6aad25142e3b00821c44d2d8a0, type: 3}
 --- !u!1001 &1835443462
 PrefabInstance:
@@ -1485,9 +1486,33 @@ PrefabInstance:
       value: Cloud_holder
       objectReference: {fileID: 0}
     - target: {fileID: 3288381368320307344, guid: 3951f70d3f6944e04ad7f79d0a0d7357, type: 3}
+      propertyPath: range
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288381368320307344, guid: 3951f70d3f6944e04ad7f79d0a0d7357, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 4916698}
+    - target: {fileID: 3288381368320307344, guid: 3951f70d3f6944e04ad7f79d0a0d7357, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 240535213}
+      objectReference: {fileID: 4916698}
+    - target: {fileID: 3288381368320307345, guid: 3951f70d3f6944e04ad7f79d0a0d7357, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288381368320307351, guid: 3951f70d3f6944e04ad7f79d0a0d7357, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288381369080983968, guid: 3951f70d3f6944e04ad7f79d0a0d7357, type: 3}
+      propertyPath: range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3288381369080983968, guid: 3951f70d3f6944e04ad7f79d0a0d7357, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 4916698}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3951f70d3f6944e04ad7f79d0a0d7357, type: 3}
 --- !u!1 &3384634802733471715

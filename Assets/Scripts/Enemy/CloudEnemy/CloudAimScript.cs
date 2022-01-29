@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CloudAimScript : MonoBehaviour
@@ -13,7 +15,9 @@ public class CloudAimScript : MonoBehaviour
     float orientTransform;
     float orientTarget;
 
-    void Update () {
+    void Update ()
+    {
+
         orientTransform = transform.position.x;
         orientTarget = target.position.x;
         if (orientTransform > orientTarget) {
@@ -29,5 +33,4 @@ public class CloudAimScript : MonoBehaviour
         transform.rotation = Quaternion.Lerp (transform.rotation,newRotation,Time.deltaTime * enemyAimSpeed);
 
     }
-
 }

@@ -11,7 +11,8 @@ public class DevilRangeAttack : MonoBehaviour
     private float timeBtwShots;
     public float startTimeBtwShots;
 
-
+    public float range;
+    private float distToPlayer;
 
 
     public Transform player;
@@ -27,6 +28,12 @@ public class DevilRangeAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        distToPlayer = Vector2.Distance(transform.position, player.position);
+        if (distToPlayer <= range)
+        {
+            
+        }
+        
         if(Vector2.Distance(transform.position, player.position) > stoppingDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
