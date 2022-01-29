@@ -47,6 +47,7 @@ public class Enemy : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             playerHealth.currentHealth -= damage;
+            playerHealth.TakeDamage();
         }
 
     }
