@@ -5,31 +5,25 @@ using UnityEngine;
 
 public class BackgroundControllerController : MonoBehaviour
 {
-    [SerializeField] private GameObject forest;
-    [SerializeField] private GameObject hell;
-    [SerializeField] private GameObject forestCam;
-    [SerializeField] private GameObject hellCam;
+    [SerializeField] private GameObject cam1;
+    [SerializeField] private GameObject cam2;
     public LayerMask playerLayer;
-    private Collider2D hellTransition;
+    private Collider2D collider2D;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        hellTransition = GetComponent<Collider2D>();
-        if (hellTransition.IsTouchingLayers(playerLayer))
+        collider2D = GetComponent<Collider2D>();
+        if (collider2D.IsTouchingLayers(playerLayer))
         {
-            if (forest.activeInHierarchy)
+            if (cam1.activeInHierarchy)
             {
-                forest.SetActive(false);
-                forestCam.SetActive(false);
-                hell.SetActive(true);
-                hellCam.SetActive(true);
+                cam1.SetActive(false);
+                cam2.SetActive(true);
             }
-            else if (hell.activeInHierarchy)
+            else if (cam2.activeInHierarchy)
             {
-                forest.SetActive(true);
-                forestCam.SetActive(true);
-                hell.SetActive(false);
-                hellCam.SetActive(true);
+                cam1.SetActive(true);
+                cam2.SetActive(false);
             }
         }
     }
