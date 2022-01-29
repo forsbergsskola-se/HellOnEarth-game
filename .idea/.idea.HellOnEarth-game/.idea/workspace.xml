@@ -4,18 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d7e01c8-2076-4aeb-9a3c-0779cf618dfa" name="Changes" comment="" />
+    <list default="true" id="6d7e01c8-2076-4aeb-9a3c-0779cf618dfa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HellOnEarth-game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HellOnEarth-game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../gd21-unity-game-mechanics-course/Assets/QASample/Scripts/Movement/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../gd21-unity-game-mechanics-course/Assets/QASample/Scripts/Movement/PlayerWalk.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Wirdermork-Wanderer/Assets/Scripts/Battle_movement.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../gd21-unity-game-mechanics-course/Assets/QASample/Scripts/Movement/CommandContainer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Wirdermork-Wanderer/Assets/Scripts/Movement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../2.5 Platformer/Assets/Scripts/PlayerJump.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../2.5 Platformer/Assets/Scripts/PlayerWalk.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,6 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1643409733002</updated>
       <workItem from="1643409775141" duration="1799000" />
+      <workItem from="1643448921536" duration="1691000" />
     </task>
     <servers />
   </component>
@@ -78,6 +79,17 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
