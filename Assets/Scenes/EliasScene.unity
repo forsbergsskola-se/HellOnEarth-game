@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &334316542 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 334316542, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
-  m_PrefabInstance: {fileID: 2817903691574398265}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e94c5ff8a1e8c3498fc4c0d36d57675, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &498806027
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,10 +513,46 @@ PrefabInstance:
       propertyPath: Slider
       value: 
       objectReference: {fileID: 1932086607}
+    - target: {fileID: 176301053150268830, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 176301053150268830, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 176301053150268830, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 176301053150268830, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 176301053150268830, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.5333333
+      objectReference: {fileID: 0}
+    - target: {fileID: 176301053150268830, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.7166667
+      objectReference: {fileID: 0}
+    - target: {fileID: 176301053150268830, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3896147047170295130, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+      propertyPath: lookDirection
+      value: 
+      objectReference: {fileID: 2817903691574398266}
     - target: {fileID: 4563904353689842933, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
       propertyPath: m_Name
       value: Player-holder
       objectReference: {fileID: 0}
+    - target: {fileID: 5030407719025450097, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 2817903691574398267}
     - target: {fileID: 7023505883038077960, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -574,6 +599,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+--- !u!114 &2817903691574398266 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5030407719025450097, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+  m_PrefabInstance: {fileID: 2817903691574398265}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1fa69e810c7c4f4b8f975f41dcbeb12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &2817903691574398267 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4706931412193478633, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+  m_PrefabInstance: {fileID: 2817903691574398265}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4658511936030732259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -737,6 +778,6 @@ PrefabInstance:
     - target: {fileID: 8797168864906591826, guid: 232f3a372c1c2b24f910089f3193ee25, type: 3}
       propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 334316542}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 232f3a372c1c2b24f910089f3193ee25, type: 3}
