@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class JumpHandler : MonoBehaviour
@@ -10,7 +8,7 @@ public class JumpHandler : MonoBehaviour
     public float jumpForce;
 
     public float rayLenght;
-    [SerializeField]private bool isGrounded;
+    private bool isGrounded;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +19,8 @@ public class JumpHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float extraHeight = .01f;
-        Debug.DrawRay(boxCollider.bounds.center, Vector3.down * (boxCollider.bounds.extents.y + extraHeight), Color.black);
-        if (Physics2D.Raycast(boxCollider.bounds.center, Vector2.down, boxCollider.bounds.extents.y + extraHeight))
+        //Debug.DrawRay(boxCollider.bounds.center, Vector3.down * rayLenght, Color.black);
+        if (Physics2D.Raycast(transform.position, Vector2.down, rayLenght) )
         {
             isGrounded = true;
         }
