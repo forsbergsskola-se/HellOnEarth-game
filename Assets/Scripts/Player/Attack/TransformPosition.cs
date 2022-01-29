@@ -10,6 +10,6 @@ public class TransformPosition : MonoBehaviour
     }
     void Update()
     {
-        transform.position = lookDirection.movement.x <= -0.1 ? new Vector2(playerPos.position.x - 1.2f, .7f) : new Vector2(playerPos.position.x + 1f, .7f);
+        transform.position = lookDirection.movement.x <= -0.1 ? new Vector2(playerPos.position.x - 1.2f, playerPos.position.y - 0.1f) : new Vector2(playerPos.position.x + 1f, playerPos.position.y - 0.1f);
     }
 }

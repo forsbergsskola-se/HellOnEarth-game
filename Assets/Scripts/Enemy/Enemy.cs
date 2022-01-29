@@ -8,17 +8,11 @@ public class Enemy : MonoBehaviour
     public float health;
     public float speed;
     public float withinRange;
-
-    private CircleCollider2D awarenessCircle;
-    //private GameObject player;
-    private BoxCollider2D playerCollider;
+    
     private Transform playerTransform;
     // Start is called before the first frame update
     void Start()
     {
-        awarenessCircle = GetComponentInChildren<CircleCollider2D>();
-        //player = GameObject.FindWithTag("Player");
-        playerCollider = GameObject.FindWithTag("Player").GetComponent<BoxCollider2D>();
         playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
     }
 
@@ -48,6 +42,6 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        throw new NotImplementedException();
+        
     }
 }
