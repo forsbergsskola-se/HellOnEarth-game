@@ -183,7 +183,7 @@ MonoBehaviour:
   myRigidbody: {fileID: 240535210}
   commandContainer: {fileID: 240535216}
   flySpeed: 20
-  gravity: 0
+  gravity: 5
 --- !u!212 &240535212
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class FlyingMovement : MonoBehaviour
     
     [SerializeField] private float flySpeed = 5f;
     public float gravity;
+    
 
     // Update is called once per frame
     void Update()
@@ -23,6 +24,7 @@ public class FlyingMovement : MonoBehaviour
         myRigidbody.velocity = new Vector3( myRigidbody.velocity.x, commandContainer.flyCommandVectical * flySpeed, 0);
         myRigidbody.velocity = new Vector3( commandContainer.flyCommandHorizontal * flySpeed, myRigidbody.velocity.y - gravity, 0);
         
+      
     }
     
     
