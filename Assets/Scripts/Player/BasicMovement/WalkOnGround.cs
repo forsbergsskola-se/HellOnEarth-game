@@ -14,6 +14,7 @@ public class WalkOnGround : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement = movement.normalized;
         
+        animator.SetFloat("AttackFace", movement.x);
         animator.SetFloat("Speed", movement.sqrMagnitude);
         animator.SetFloat("Horizontal", movement.x);
         rb.velocity = new Vector2(movementSpeed * movement.x, rb.velocity.y + gravity);

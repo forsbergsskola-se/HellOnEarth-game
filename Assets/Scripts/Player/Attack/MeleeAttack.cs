@@ -4,7 +4,7 @@ public class MeleeAttack : MonoBehaviour
 {
     private float _timeBtwAttacks;
     public float startTimeBtwAttacks;
-
+    [SerializeField] private Animator animator;
     public Transform attackPos;
     public LayerMask enemyMask;
     public float attackRange;
@@ -18,6 +18,7 @@ public class MeleeAttack : MonoBehaviour
             if (Input.GetButton("Fire1"))
             {
                 _timeBtwAttacks = startTimeBtwAttacks;
+                animator.SetTrigger("Attack");
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemyMask);
                 foreach (var enemy in enemiesToDamage)
                 {
