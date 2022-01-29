@@ -6,7 +6,7 @@ public class TransformPosition : MonoBehaviour
     public Transform playerPos;
     void Start()
     {
-        playerPos = GameObject.Find("Player-holder").GetComponent<Transform>();
+        playerPos = GameObject.Find("Oden").GetComponent<Transform>();
     }
     void Update()
     {

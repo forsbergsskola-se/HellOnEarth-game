@@ -21,7 +21,7 @@ public class MeleeAttack : MonoBehaviour
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemyMask);
                 foreach (var enemy in enemiesToDamage)
                 {
-                    enemy.GetComponent<Enemy>().health -= damage;
+                    enemy.GetComponent<EnemyBase>().health -= damage;
                 }
             }
         }
