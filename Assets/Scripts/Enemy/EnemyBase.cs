@@ -11,11 +11,13 @@ public class EnemyBase : MonoBehaviour
     public float withinRange;
     
     private Transform playerTransform;
+    private Transform bPlayerTransform;
     public PlayerHealth playerHealth;
     // Start is called before the first frame update
     void Start()
     {
-        playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        playerTransform = GameObject.Find("Oden").GetComponent<Transform>();
+        bPlayerTransform = GameObject.Find("Bird").GetComponent<Transform>();
     }
 
     // Update is called once per frame

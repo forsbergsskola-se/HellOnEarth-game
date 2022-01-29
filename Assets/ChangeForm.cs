@@ -30,6 +30,7 @@ public class ChangeForm : MonoBehaviour
             if (!transformed)
             {
                 transformed = true;
+                crow.transform.position = oden.transform.position;
                 oden.SetActive(false);
                 crow.SetActive(true);
                 transInProgress = true;
@@ -38,6 +39,7 @@ public class ChangeForm : MonoBehaviour
             else if (transformed)
             {
                 transformed = false;
+                oden.transform.position = crow.transform.position;
                 oden.SetActive(true);
                 crow.SetActive(false);
                 transInProgress = true;
