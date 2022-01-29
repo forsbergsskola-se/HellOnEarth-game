@@ -278,7 +278,6 @@ GameObject:
   - component: {fileID: 5030407719025450097}
   - component: {fileID: 6731851968596236089}
   - component: {fileID: 7858370430010070273}
-  - component: {fileID: 8449045584363881279}
   m_Layer: 2
   m_Name: Oden
   m_TagString: Player
@@ -470,21 +469,6 @@ MonoBehaviour:
     m_Bits: 256
   attackRange: 0.7
   damage: 10
---- !u!114 &8449045584363881279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2817903692358862427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e94c5ff8a1e8c3498fc4c0d36d57675, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  healthBar: {fileID: 334316543}
 --- !u!1 &4563904353689842933
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +480,7 @@ GameObject:
   - component: {fileID: 7023505883038077960}
   - component: {fileID: 334316543}
   - component: {fileID: 334316544}
+  - component: {fileID: 2817903691574398271}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -546,3 +531,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5be9cdb151780448ddf23091d627cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oden: {fileID: 2817903692358862427}
+  crow: {fileID: 1585448730}
+  transformed: 0
+--- !u!114 &2817903691574398271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4563904353689842933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e94c5ff8a1e8c3498fc4c0d36d57675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 334316543}

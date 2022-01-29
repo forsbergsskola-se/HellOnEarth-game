@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &334316535 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4563904353689842933, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
-  m_PrefabInstance: {fileID: 2817903691574398265}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &498806027
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,26 +563,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
---- !u!114 &2817903691574398269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334316535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93f0defcbf29e4b48be0b5e8c416a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 50
-  damage: 10
-  speed: 3
-  withinRange: 3
-  playerHealth: {fileID: 2817903691574398271}
 --- !u!114 &2817903691574398271 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8449045584363881279, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2817903691574398271, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
   m_PrefabInstance: {fileID: 2817903691574398265}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
