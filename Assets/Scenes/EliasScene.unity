@@ -375,6 +375,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &626052760 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1233980384404133771, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+  m_PrefabInstance: {fileID: 2817903691574398265}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1932086606 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4658511937929093805, guid: aff2e1f69445b6247ab0a3a647fd86f8, type: 3}
@@ -561,6 +566,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7858370430010070273, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 626052760}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
 --- !u!114 &2817903691574398271 stripped
