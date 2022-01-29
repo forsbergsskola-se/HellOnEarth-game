@@ -6,7 +6,7 @@ public class ForShooting : MonoBehaviour
 //SHOOTING
 {
     public Transform firePoint;
-    public GameObject bulletPrefab;
+    public GameObject LightningPrefab;
     public float FireRate = 1.0f;
     public float NextFire = 1.0f;
     public float timeToDisappear = 5;
@@ -33,6 +33,6 @@ public class ForShooting : MonoBehaviour
 
     void Shoot ()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Instantiate(LightningPrefab, firePoint.position, firePoint.rotation);
     }
 }

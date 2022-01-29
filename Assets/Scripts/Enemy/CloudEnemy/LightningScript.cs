@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bulletScript : MonoBehaviour
+public class LightningScript : MonoBehaviour
 {
     public int damage = 40;
     // int for damage
