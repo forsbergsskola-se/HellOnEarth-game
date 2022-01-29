@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8797168864906591826}
   - component: {fileID: 8797168864906591830}
   - component: {fileID: 8797168864906591829}
-  - component: {fileID: 3866016532896946726}
+  - component: {fileID: 8670272870697827767}
   m_Layer: 8
   m_Name: BasicEnemy
   m_TagString: Untagged
@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  speed: 2
+  withinRange: 3
 --- !u!61 &8797168864906591830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,9 +149,9 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!58 &3866016532896946726
-CircleCollider2D:
+  m_Constraints: 6
+--- !u!61 &8670272870697827767
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -162,5 +164,15 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 3
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

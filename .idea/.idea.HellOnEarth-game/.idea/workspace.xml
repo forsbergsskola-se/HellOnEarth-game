@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d7e01c8-2076-4aeb-9a3c-0779cf618dfa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attack/TransformPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attack/TransformPosition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HellOnEarth-game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HellOnEarth-game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BasicEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BasicEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EliasScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EliasScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attack/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attack/Enemy.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +19,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../2.5 Platformer/Assets/Scripts/PlayerJump.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../2.5 Platformer/Assets/Scripts/PlayerWalk.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../2.5 Platformer/Assets/Scripts/A.I_/MoveTowardsPlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Test/Project-Spy/Assets/Scripts/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../2.5 Platformer/Assets/Scripts/CommandContainer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../2.5 Platformer/Assets/Scripts/PlayerInputController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Test/Project-Spy/Assets/Scripts/CrouchCheck.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -73,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1643409733002</updated>
       <workItem from="1643409775141" duration="1799000" />
-      <workItem from="1643448921536" duration="9133000" />
+      <workItem from="1643448921536" duration="12333000" />
     </task>
     <servers />
   </component>
