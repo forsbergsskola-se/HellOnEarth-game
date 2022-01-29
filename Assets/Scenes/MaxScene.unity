@@ -706,8 +706,14 @@ PrefabInstance:
       propertyPath: attackSpeed
       value: 1.2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1585448735, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+--- !u!1 &1273682545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1585448730, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+  m_PrefabInstance: {fileID: 1003511912}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1273682547 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1585448732, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
@@ -811,6 +817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1936801548}
+  birdForm: {fileID: 1273682545}
   offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1472393726
 GameObject:
@@ -3168,6 +3175,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6838405403393752097, guid: 821a82af1be596741a69fd804cb88914, type: 3}
+      propertyPath: bird
+      value: 
+      objectReference: {fileID: 1273682545}
+    - target: {fileID: 6838405403393752097, guid: 821a82af1be596741a69fd804cb88914, type: 3}
+      propertyPath: oden
+      value: 
+      objectReference: {fileID: 1936801548}
+    - target: {fileID: 6838405403393752097, guid: 821a82af1be596741a69fd804cb88914, type: 3}
       propertyPath: walkScript
       value: 
       objectReference: {fileID: 1936801552}
@@ -3175,6 +3190,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1936801548}
+    - target: {fileID: 6838405403393752100, guid: 821a82af1be596741a69fd804cb88914, type: 3}
+      propertyPath: birdForm
+      value: 
+      objectReference: {fileID: 1273682545}
     - target: {fileID: 6838405403393752127, guid: 821a82af1be596741a69fd804cb88914, type: 3}
       propertyPath: m_Name
       value: Forest back
