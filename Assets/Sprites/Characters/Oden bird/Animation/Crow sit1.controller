@@ -114,7 +114,7 @@ BlendTree:
   m_BlendParameterY: Horizontal
   m_MinThreshold: 0
   m_MaxThreshold: 1
-  m_UseAutomaticThresholds: 1
+  m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 0
 --- !u!1101 &4631040072823344171
@@ -135,8 +135,8 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.5625
+  m_TransitionOffset: 0.29300785
+  m_ExitTime: 0.99834913
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0

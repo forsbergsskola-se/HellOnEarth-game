@@ -11,14 +11,16 @@ public class FlyingMovement : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private float flySpeed = 5f;
     public float gravity;
-    private Vector2 flyVector;   
+    private Vector2 flyVector;
+    public float horizontal;
 
     // Update is called once per frame
     void Update()
     {
         flyVector.x = commandContainer.flyCommandHorizontal;
         animator.SetFloat("Speed", flyVector.sqrMagnitude);
-        animator.SetFloat("Horizontal", commandContainer.flyCommandHorizontal);
+        horizontal = Convert.ToSingle(Math.Round(commandContainer.flyCommandHorizontal));
+        animator.SetFloat("Horizontal", horizontal);
         HandleFlying();
     }
     private void HandleFlying()
