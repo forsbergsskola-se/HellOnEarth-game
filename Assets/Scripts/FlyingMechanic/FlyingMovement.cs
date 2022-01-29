@@ -5,53 +5,24 @@ using UnityEngine;
 
 public class FlyingMovement : MonoBehaviour
 {
-    public float speed;
-    public float acceleration;
-    Rigidbody2D myBody;
+    [SerializeField] private Rigidbody2D myRigidbody;
+    [SerializeField] private CommandContainer commandContainer;
+    
+    [SerializeField] private float flySpeed = 5f;
 
-    public float rotationControl;
-
-    public float movY, movX = 1;
-    // Start is called before the first frame update
-    void Start()
+    // Update is called once per frame
+    void Update()
     {
-        myBody = GetComponent<Rigidbody2D>();
+        HandleFlying();
     }
-
-    private void Update()
+    private void HandleFlying()
     {
-        movY = Input.GetAxis("Vertical");
-    }
-
-    private void FixedUpdate()
-    {
-        Vector2 vel = transform.right * (movX * acceleration);
-        myBody.AddForce(vel);
-
-        float dir = Vector2.Dot(myBody.velocity, myBody.GetRelativeVector(Vector2.right));
-
-        if (acceleration > 0)
-        {
-            if (dir > 0)
-            {
-                myBody.rotation += movY * rotationControl * (myBody.velocity.magnitude / speed);
-            }
-            else
-            {
-                myBody.rotation -= movY * rotationControl * (myBody.velocity.magnitude / speed);
-            }
-        }
-
-        float thrustForce = Vector2.Dot(myBody.velocity, myBody.GetRelativeVector(Vector2.down)) * 2.0f;
-
-        Vector2 relForce = Vector2.up * thrustForce;
-        
-        myBody.AddForce(myBody.GetRelativeVector(relForce));
-
-        if (myBody.velocity.magnitude > speed)
-        {
-            myBody.velocity = myBody.velocity.normalized * speed;
-        }
+        //ToDO Create movement functionality
+        myRigidbody.velocity = new Vector3( myRigidbody.velocity.x, commandContainer.flyCommandVectical * flySpeed, 0);
+        myRigidbody.velocity = new Vector3( commandContainer.flyCommandHorizontal * flySpeed, myRigidbody.velocity.y, 0);
         
     }
+    
+    
+    
 }
