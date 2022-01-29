@@ -6,6 +6,7 @@ public class ChangeForm : MonoBehaviour
 {
     public GameObject oden;
     public GameObject crow;
+    [SerializeField] private ParticleSystem ps;
 
     public bool transformed;
     public bool transInProgress;
@@ -39,7 +40,7 @@ public class ChangeForm : MonoBehaviour
             if (!transformed)
             {
                 transformed = true;
-                
+                ps.Play();
                 oden.SetActive(false);
                 crow.SetActive(true);
                 transInProgress = true;
@@ -48,7 +49,7 @@ public class ChangeForm : MonoBehaviour
             else if (transformed)
             {
                 transformed = false;
-                
+                ps.Play();
                 oden.SetActive(true);
                 crow.SetActive(false);
                 transInProgress = true;
