@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  ySpeed: -0.15
+  gravity: -0.15
   movement: {x: 0, y: 0}
   animator: {fileID: 2817903692358862426}
   rb: {fileID: 2817903691299535665}

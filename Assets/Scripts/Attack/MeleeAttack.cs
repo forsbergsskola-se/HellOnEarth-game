@@ -1,42 +1,33 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour
 {
-    private float timeBtwAttacks;
+    private float _timeBtwAttacks;
     public float startTimeBtwAttacks;
 
     public Transform attackPos;
     public LayerMask enemyMask;
     public float attackRange;
-
     public int damage;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if (timeBtwAttacks <= 0)
+        if (_timeBtwAttacks <= 0)
         {
             if (Input.GetButton("Fire1"))
             {
-                timeBtwAttacks = startTimeBtwAttacks;
+                _timeBtwAttacks = startTimeBtwAttacks;
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemyMask);
-                for (int i = 0; i < enemiesToDamage.Length; i++)
+                foreach (var enemy in enemiesToDamage)
                 {
-                    enemiesToDamage[i].GetComponent<Enemy>().health -= damage;
+                    enemy.GetComponent<Enemy>().health -= damage;
                 }
             }
         }
         else
         {
-            timeBtwAttacks -= Time.deltaTime;
+            _timeBtwAttacks -= Time.deltaTime;
         }
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class WalkOnGround : MonoBehaviour
 {
     public float movementSpeed = 5f;
-    public float ySpeed;
+    public float gravity;
     [SerializeField] private Vector2 movement;
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody2D rb;
@@ -16,7 +16,7 @@ public class WalkOnGround : MonoBehaviour
         
         animator.SetFloat("Speed", movement.sqrMagnitude);
         animator.SetFloat("Horizontal", movement.x);
-        rb.velocity = new Vector2(movementSpeed * movement.x, rb.velocity.y + ySpeed);
+        rb.velocity = new Vector2(movementSpeed * movement.x, rb.velocity.y + gravity);
         //rb.velocity = rb.position + movement * movementSpeed * Time.time;
     }
 }
