@@ -10134,7 +10134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  gravity: -0.19
+  gravity: -0.1
   attackScript: {fileID: 7858370430010070273}
   movement: {x: 0, y: 0}
   animator: {fileID: 1233980384404133771}
@@ -10151,7 +10151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7424592b812a4ad4faeb8878e66ba8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 14
+  jumpForce: 17
   rayLenght: 0.8
 --- !u!114 &7858370430010070273
 MonoBehaviour:
