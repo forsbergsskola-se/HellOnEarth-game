@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  player: {fileID: 0}
   chase: 0
   startingPoint: {fileID: 4147782927250909368}
 --- !u!61 &6678627992615320116
