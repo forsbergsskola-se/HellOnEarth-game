@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dC = GameObject.FindObjectOfType<>();
+        dC = GameObject.FindObjectOfType<DeathCount>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -31,10 +31,9 @@ public class PlayerHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            
+            dC.IncreaseDeaths();
             //gameObject.SetActive(false);
             SceneManager.LoadScene("PlayScene");
-            PlayerPrefs.SetFloat("deathCount", deathCount);
         }
     }
 }
