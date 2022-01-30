@@ -6,14 +6,14 @@ using UnityEngine;
 public class FlyingEnemy : MonoBehaviour
 {
     public float speed;
-    private GameObject player;
+    public GameObject player;
     public bool chase = false;
     public Transform startingPoint;
    
     // Start is called before the first frame update
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     // Update is called once per frame
