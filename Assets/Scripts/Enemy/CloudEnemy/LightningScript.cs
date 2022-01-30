@@ -34,10 +34,12 @@ public class LightningScript : MonoBehaviour
         //     enemy.TakeDamage();
         //     Destroy(gameObject);
         // }
+        
         if (collider2D.IsTouchingLayers(playerLayer))
         {
             playerHealth.currentHealth -= damage;
-            playerHealth.TakeDamage();
+                playerHealth.TakeDamage();
+                Destroy(gameObject);
         }
     }
 }

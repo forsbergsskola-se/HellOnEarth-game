@@ -7,15 +7,19 @@ public class ChangeForm : MonoBehaviour
     public GameObject oden;
     public GameObject crow;
     [SerializeField] private ParticleSystem ps;
+    private bool offCoolDown = true;
 
     public bool transformed;
     public bool transInProgress;
+
+    [SerializeField] private float TransformationCoolDown = 3;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire2"))
+        if (Input.GetButton("Fire2") && offCoolDown)
         {
             StartCoroutine(TransformPlayer());
+            offCoolDown = false;
         }
 
         if (crow.activeInHierarchy)
@@ -32,7 +36,8 @@ public class ChangeForm : MonoBehaviour
     {
         if (transInProgress)
         {
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(TransformationCoolDown);
+            offCoolDown = true;
             transInProgress = false;
         }
         else
@@ -44,7 +49,8 @@ public class ChangeForm : MonoBehaviour
                 oden.SetActive(false);
                 crow.SetActive(true);
                 transInProgress = true;
-                yield return new WaitForSeconds(3);
+                yield return new WaitForSeconds(TransformationCoolDown);
+                offCoolDown = true;
             }
             else if (transformed)
             {
@@ -53,7 +59,8 @@ public class ChangeForm : MonoBehaviour
                 oden.SetActive(true);
                 crow.SetActive(false);
                 transInProgress = true;
-                yield return new WaitForSeconds(3);
+                yield return new WaitForSeconds(TransformationCoolDown);
+                offCoolDown = true;
             }
         }
     }
