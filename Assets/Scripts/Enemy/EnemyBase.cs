@@ -51,6 +51,5 @@ public class EnemyBase : MonoBehaviour
             playerHealth.currentHealth -= damage;
             playerHealth.TakeDamage();
         }
-
     }
 }
