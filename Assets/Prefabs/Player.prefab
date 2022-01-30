@@ -10151,8 +10151,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7424592b812a4ad4faeb8878e66ba8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 17
+  jumpForce: 15
   rayLenght: 0.8
+  _isGrounded: 0
+  ground:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &7858370430010070273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10276,6 +10280,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42fd2df82dec494bbbc69030e14a7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deaths: 0
+  deathText: {fileID: 0}
+  deathTextPro: {fileID: 0}
 --- !u!1 &5539099710207465610
 GameObject:
   m_ObjectHideFlags: 0
