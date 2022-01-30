@@ -17,7 +17,6 @@ public class EnemyBase : MonoBehaviour
     void Start()
     {
         playerTransform = GameObject.Find("Oden").GetComponent<Transform>();
-        bPlayerTransform = GameObject.Find("Bird").GetComponent<Transform>();
     }
 
     // Update is called once per frame
