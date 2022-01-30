@@ -13,12 +13,15 @@ public class FlyingMovement : MonoBehaviour
     public float gravity;
     private Vector2 flyVector;
     public float horizontal;
+    public float tooltip;
 
     // Update is called once per frame
     void Update()
     {
         flyVector.x = commandContainer.flyCommandHorizontal;
-        animator.SetFloat("Speed", flyVector.sqrMagnitude);
+        flyVector.x = Math.Abs(flyVector.x);
+        tooltip = flyVector.x;
+        animator.SetFloat("Speed", flyVector.x);
         horizontal = /*Convert.ToSingle(Math.Round())*/commandContainer.flyCommandHorizontal;
         animator.SetFloat("Horizontal", horizontal);
         HandleFlying();

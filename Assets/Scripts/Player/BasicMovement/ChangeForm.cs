@@ -13,7 +13,8 @@ public class ChangeForm : MonoBehaviour
     public bool transformed;
     [SerializeField] private Animator crowAnimator;
     [SerializeField] private Animator odenAnimator;
-
+    
+    
     public float transformationCoolDown = 3;
     // Update is called once per frame
     void Update()
@@ -46,8 +47,10 @@ public class ChangeForm : MonoBehaviour
                 oden.SetActive(false);
                 crow.SetActive(true);
                 crowAnimator.Play("Oden bird sit");
+                cdBar.ChangeFace();
                 yield return new WaitForSeconds(transformationCoolDown/4);
                 cdBar.cdSlider.value += 15f;
+                crowAnimator.Play("Oden bird sit");
                 yield return new WaitForSeconds(transformationCoolDown/4);    
                 cdBar.cdSlider.value += 15f;
                 yield return new WaitForSeconds(transformationCoolDown/4);  
@@ -63,6 +66,7 @@ public class ChangeForm : MonoBehaviour
                 oden.SetActive(true);
                 crow.SetActive(false);
                 odenAnimator.Play("Oden Idle");
+                cdBar.ChangeFace();
                 yield return new WaitForSeconds(transformationCoolDown/4);
                 cdBar.cdSlider.value += 15f;
                 yield return new WaitForSeconds(transformationCoolDown/4);    

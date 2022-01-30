@@ -4,7 +4,6 @@ using UnityEngine;
 public class MeleeAttack : MonoBehaviour
 {
     private float _timeBtwAttacks;
-   // public float startTimeBtwAttacks;
     [SerializeField] private Animator animator;
     public Transform attackPos;
     public LayerMask enemyMask;
@@ -12,16 +11,16 @@ public class MeleeAttack : MonoBehaviour
     public int damage;
     public float attackSpeed = 1f;
     private float attackCD = 0f;
-
-    // Update is called once per frame
+    public bool isAttacking = false;
+    
     void Update()
     {
-        if (Time.time >= attackCD/*_timeBtwAttacks <= 0*/)
+        if (Time.time >= attackCD)
         {
             if (Input.GetButton("Fire1"))
             {
-               /* _timeBtwAttacks = startTimeBtwAttacks;*/
-               attackCD = Time.time + 1f / attackSpeed;
+                isAttacking = true;
+                attackCD = Time.time + 1f / attackSpeed;
                 animator.SetTrigger("Attack");
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemyMask);
                 foreach (var enemy in enemiesToDamage)
@@ -29,9 +28,11 @@ public class MeleeAttack : MonoBehaviour
                     enemy.GetComponent<EnemyBase>().health -= damage;
                 }
             }
+            else isAttacking = false;
         }
         else
         {
+            
             _timeBtwAttacks -= Time.deltaTime;
         }
     }

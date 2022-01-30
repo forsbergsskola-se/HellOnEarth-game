@@ -398,6 +398,14 @@ PrefabInstance:
       propertyPath: TransformationCoolDown
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1585448730, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2817903692358862427, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4563904353689842933, guid: 0619a59524efbf24e9f5c744b98fc5b1, type: 3}
       propertyPath: m_Name
       value: Player
@@ -841,8 +849,8 @@ GameObject:
   - component: {fileID: 1186745226}
   - component: {fileID: 1186745225}
   m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
+  m_Name: OdenFace
+  m_TagString: OdenFace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1183,8 +1191,8 @@ GameObject:
   - component: {fileID: 2060677746}
   - component: {fileID: 2060677745}
   m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
+  m_Name: CrowFace
+  m_TagString: CrowFace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1514,6 +1522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ecb7aec4e54cf49a71dcd4f98c9e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crowFace: {fileID: 2060677743}
+  odenFace: {fileID: 1186745223}
   cdSlider: {fileID: 2537178035766365917}
   changeForm: {fileID: 1806133745}
 --- !u!114 &2537178036907851332

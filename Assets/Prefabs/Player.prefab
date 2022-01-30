@@ -4979,6 +4979,7 @@ MonoBehaviour:
   flySpeed: 10
   gravity: 5
   horizontal: 0
+  tooltip: 0
 --- !u!114 &1585448737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10134,6 +10135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   gravity: -0.19
+  attackScript: {fileID: 7858370430010070273}
   movement: {x: 0, y: 0}
   animator: {fileID: 1233980384404133771}
   rb: {fileID: 4706931412193478633}
@@ -10171,6 +10173,7 @@ MonoBehaviour:
   attackRange: 0.7
   damage: 10
   attackSpeed: 1.2
+  isAttacking: 0
 --- !u!1 &4563904353689842933
 GameObject:
   m_ObjectHideFlags: 0
@@ -10237,8 +10240,13 @@ MonoBehaviour:
   oden: {fileID: 2817903692358862427}
   crow: {fileID: 1585448730}
   ps: {fileID: 212398632}
+  offCoolDown: 1
+  cdBar: {fileID: 0}
+  transformInput: 0
   transformed: 0
-  transInProgress: 0
+  crowAnimator: {fileID: 1585448732}
+  odenAnimator: {fileID: 1233980384404133771}
+  transformationCoolDown: 3
 --- !u!114 &2817903691574398271
 MonoBehaviour:
   m_ObjectHideFlags: 0
