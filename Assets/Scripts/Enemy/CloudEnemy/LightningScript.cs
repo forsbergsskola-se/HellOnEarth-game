@@ -12,12 +12,12 @@ public class LightningScript : MonoBehaviour
     public PlayerHealth playerHealth;
     private Vector3 direction;
     private GameObject oden;
-    private Collider2D collider2D;
+    private Collider2D collider2;
     [SerializeField] private LayerMask playerLayer;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        collider2D = GetComponent<Collider2D>();
+        collider2 = GetComponent<Collider2D>();
         playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
         oden = GameObject.Find("Target");
         direction = (oden.transform.position - transform.position).normalized;
@@ -27,15 +27,7 @@ public class LightningScript : MonoBehaviour
     
     void OnTriggerEnter2D (Collider2D hitInfo)
     {
-        // PlayerHealth enemy = hitInfo.GetComponent<PlayerHealth>();
-        // // Grabs the enemyHealth script component
-        // if (enemy != null)
-        // {
-        //     enemy.TakeDamage();
-        //     Destroy(gameObject);
-        // }
-        
-        if (collider2D.IsTouchingLayers(playerLayer))
+        if (collider2.IsTouchingLayers(playerLayer))
         {
             playerHealth.currentHealth -= damage;
                 playerHealth.TakeDamage();

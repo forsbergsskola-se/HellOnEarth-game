@@ -8,16 +8,16 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     [SerializeField] private LayerMask playerLayer;
-    private Collider2D collider;
+    private Collider2D collider2;
     [SerializeField] private PlayerHealth ph;
     [SerializeField] private float damage;
     private void Start()
     {
-        collider = GetComponent<Collider2D>();
+        collider2 = GetComponent<Collider2D>();
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (!collider.IsTouchingLayers(playerLayer)) return;
+        if (!collider2.IsTouchingLayers(playerLayer)) return;
         ph.currentHealth -= damage;
         ph.TakeDamage();
     }
