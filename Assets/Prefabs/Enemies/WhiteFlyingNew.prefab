@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8225522891438809136}
   - component: {fileID: -7550078014338638767}
   m_Layer: 8
-  m_Name: WhitFlyingNew
+  m_Name: WhiteFlyingNew
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

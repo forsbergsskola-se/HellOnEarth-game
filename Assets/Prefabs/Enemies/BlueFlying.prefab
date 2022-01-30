@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8225522891438809136}
   - component: {fileID: -508777430217367240}
   m_Layer: 8
-  m_Name: RobinFlyingEnemy 1
+  m_Name: BlueFlying
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
