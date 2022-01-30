@@ -26,6 +26,7 @@ public class MeleeAttack : MonoBehaviour
                 foreach (var enemy in enemiesToDamage)
                 {
                     enemy.GetComponent<EnemyBase>().health -= damage;
+                    enemy.GetComponent<FlyingEnemyBase>().health -= damage;
                 }
             }
             else isAttacking = false;
