@@ -31,8 +31,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            dC.IncreaseDeaths();
-            //gameObject.SetActive(false);
+            gameObject.SetActive(false);
             SceneManager.LoadScene("PlayScene");
         }
     }
