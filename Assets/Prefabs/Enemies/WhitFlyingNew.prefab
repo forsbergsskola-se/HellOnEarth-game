@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 8963978324779587980}
   - component: {fileID: 5149068690935949745}
   - component: {fileID: 161652250312992452}
-  - component: {fileID: 1387930527244212110}
   - component: {fileID: 8173790191740997744}
   - component: {fileID: 7734404268359829239}
   - component: {fileID: 2065999292930653276}
   - component: {fileID: 8225522891438809136}
-  m_Layer: 0
-  m_Name: RobinFlyingEnemy
+  - component: {fileID: -7550078014338638767}
+  m_Layer: 8
+  m_Name: WhitFlyingNew
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 334357201858120933}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.48, y: -2.27, z: -0.5729388}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1120319048, guid: 642cde30ec8104d06928ef2515ee6a68, type: 3}
+  m_Sprite: {fileID: 48973809, guid: d83ecb4a74f454339bea8e14c3f8205d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 334357201858120933}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3559dde531114439c918a2f01ed39959, type: 2}
+  m_Controller: {fileID: 9100000, guid: 309486fd95b4743b5a3e304d14849220, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -110,23 +110,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1387930527244212110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334357201858120933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93f0defcbf29e4b48be0b5e8c416a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  damage: 5
-  speed: 2
-  withinRange: 4
-  playerHealth: {fileID: 0}
 --- !u!61 &8173790191740997744
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -144,7 +127,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.425}
+    oldSize: {x: 0.525, y: 0.425}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -191,7 +174,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.425}
+    oldSize: {x: 0.525, y: 0.425}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -216,4 +199,21 @@ MonoBehaviour:
   damage: 5
   speed: 2
   withinRange: 5
+  playerHealth: {fileID: 0}
+--- !u!114 &-7550078014338638767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334357201858120933}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93f0defcbf29e4b48be0b5e8c416a6bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  damage: 0
+  speed: 0
+  withinRange: 0
   playerHealth: {fileID: 0}

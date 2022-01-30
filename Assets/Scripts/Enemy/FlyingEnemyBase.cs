@@ -23,6 +23,7 @@ public class FlyingEnemyBase : MonoBehaviour
     {
         AttackRange();
         CheckPlayerDamage();
+        Flip();
     }
 
     private void CheckPlayerDamage()
@@ -32,7 +33,17 @@ public class FlyingEnemyBase : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    private void Flip()
+    {
+        if (transform.position.x > playerTransform.transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0,0,0); 
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0,180,0);
+        }
+    }
     private void AttackRange()
     {
         float dist = Vector2.Distance(playerTransform.position, transform.position);

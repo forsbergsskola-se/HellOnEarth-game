@@ -12,7 +12,6 @@ public class MeleeAttack : MonoBehaviour
     public float attackSpeed = 1f;
     private float attackCD = 0f;
     public bool isAttacking = false;
-    
     void Update()
     {
         if (Time.time >= attackCD)
@@ -37,9 +36,6 @@ public class MeleeAttack : MonoBehaviour
             _timeBtwAttacks -= Time.deltaTime;
         }
     }
-
-    
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

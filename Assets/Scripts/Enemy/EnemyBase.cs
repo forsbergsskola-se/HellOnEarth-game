@@ -24,6 +24,7 @@ public class EnemyBase : MonoBehaviour
     {
         AttackRange();
         CheckPlayerDamage();
+        Flip();
     }
 
     private void CheckPlayerDamage()
@@ -42,7 +43,17 @@ public class EnemyBase : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerTransform.position.x, transform.position.y), speed * Time.deltaTime);
         }
     }
-
+    private void Flip()
+    {
+        if (transform.position.x > playerTransform.transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0,0,0); 
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0,180,0);
+        }
+    }
     public void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
