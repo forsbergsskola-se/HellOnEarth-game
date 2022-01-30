@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ebb8407ee37451d9f7d90ce019cf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 40
+  damage: 20
   speed: 20
   playerHealth: {fileID: 0}
   playerLayer:
