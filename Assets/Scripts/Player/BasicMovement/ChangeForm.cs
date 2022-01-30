@@ -7,19 +7,23 @@ public class ChangeForm : MonoBehaviour
     public GameObject oden;
     public GameObject crow;
     [SerializeField] private ParticleSystem ps;
-    private bool offCoolDown = true;
-
+    public bool offCoolDown = true;
+    [SerializeField] private TransformationCooldownBar cdBar;
+    public bool transformInput;
     public bool transformed;
-    public bool transInProgress;
+    [SerializeField] private Animator crowAnimator;
+    [SerializeField] private Animator odenAnimator;
 
-    [SerializeField] private float TransformationCoolDown = 3;
+    public float transformationCoolDown = 3;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire2") && offCoolDown)
+        transformInput = Input.GetButton("Fire2");
+        if (transformInput && offCoolDown)
         {
             StartCoroutine(TransformPlayer());
             offCoolDown = false;
+            cdBar.cdSlider.value = 40f;
         }
 
         if (crow.activeInHierarchy)
@@ -30,38 +34,47 @@ public class ChangeForm : MonoBehaviour
         {
             crow.transform.position = oden.transform.position;
         }
+        
     }
 
     IEnumerator TransformPlayer()
     {
-        if (transInProgress)
-        {
-            yield return new WaitForSeconds(TransformationCoolDown);
-            offCoolDown = true;
-            transInProgress = false;
-        }
-        else
-        {
+       
             if (!transformed)
             {
-                transformed = true;
                 ps.Play();
                 oden.SetActive(false);
                 crow.SetActive(true);
-                transInProgress = true;
-                yield return new WaitForSeconds(TransformationCoolDown);
+                crowAnimator.Play("Oden bird sit");
+                yield return new WaitForSeconds(transformationCoolDown/4);
+                cdBar.cdSlider.value += 15f;
+                yield return new WaitForSeconds(transformationCoolDown/4);    
+                cdBar.cdSlider.value += 15f;
+                yield return new WaitForSeconds(transformationCoolDown/4);  
+                cdBar.cdSlider.value += 15f;
+                yield return new WaitForSeconds(transformationCoolDown/4);  
+                cdBar.cdSlider.value += 15f;
+                transformed = true;
                 offCoolDown = true;
             }
             else if (transformed)
             {
-                transformed = false;
                 ps.Play();
                 oden.SetActive(true);
                 crow.SetActive(false);
-                transInProgress = true;
-                yield return new WaitForSeconds(TransformationCoolDown);
+                odenAnimator.Play("Oden Idle");
+                yield return new WaitForSeconds(transformationCoolDown/4);
+                cdBar.cdSlider.value += 15f;
+                yield return new WaitForSeconds(transformationCoolDown/4);    
+                cdBar.cdSlider.value += 15f;
+                yield return new WaitForSeconds(transformationCoolDown/4);  
+                cdBar.cdSlider.value += 15f;
+                yield return new WaitForSeconds(transformationCoolDown/4);  
+                cdBar.cdSlider.value += 15f;
+                transformed = false;
                 offCoolDown = true;
             }
-        }
+        
     }
+  
 }
